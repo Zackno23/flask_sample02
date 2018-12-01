@@ -8,5 +8,9 @@ def hello_world():
     return "Hello World"
 
 
+@app.route("/login", methods=(["GET", "POST"]))
+def login():
+    return "login page"
+
 if __name__ == "__main__":
     app.run(debug=True)
