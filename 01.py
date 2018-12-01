@@ -10,8 +10,15 @@ def hello_world():
 
 @app.route("/login", methods=(["GET", "POST"]))
 def login():
-    print(request.method)
-    return "login page"
+    if request.method == "GET":
+        return '''
+        <form action = "/login"moethod = "post">
+            Password: <input type="text"><br>
+            <input type = 'submit'>
+        </form>
+        '''
+    if request.method == "POST":
+        return "Logged in"
 
 
 if __name__ == "__main__":
