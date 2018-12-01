@@ -12,7 +12,7 @@ def hello_world():
 def login():
     if request.method == "GET":
         return '''
-        <form action = "/login"moethod = "post">
+        <form action = "/login" method = "post">
             Password: <input type="text"><br>
             <input type = 'submit'>
         </form>
